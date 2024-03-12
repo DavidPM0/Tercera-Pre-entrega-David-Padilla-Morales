@@ -1,0 +1,34 @@
+{% extends "aplicacion/index.html" %}
+
+{% block titulo %}
+<h1 class="display-5 fw-bolder text-white mb-2">Vendedores</h1>
+<p class="lead fw-normal text-white-50 mb-4">Visión completa de todos los registros de vendedores</p>
+{% endblock titulo %}
+
+{% block contenido %}
+<a class="btn btn-primary mb-5" href="{% url 'vendedores_form' %}" role="button">Agregar Nuevo</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Correo</th>
+            <th>Fecha de inicio</th>
+            <th>Ventas</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for c in vendedores %}
+        <tr>
+            <th>{{ c.id }}</th>
+            <th>{{ c.nombre }}</th>
+            <th>{{ c.apellido }}</th>
+            <th>{{ c.correo }}</th>
+            <th>{{ c.fechaInicio }}</th>
+            <th>{{ c.venta }}</th>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock contenido %}

@@ -1,0 +1,32 @@
+{% extends "aplicacion/index.html" %}
+
+{% block titulo %}
+<h1 class="display-5 fw-bolder text-white mb-2">Productos</h1>
+<p class="lead fw-normal text-white-50 mb-4">Visión completa de todos los registros de productos</p>
+{% endblock titulo %}
+
+{% block contenido %}
+<a class="btn btn-primary mb-5" href="{% url 'productos_form' %}" role="button">Agregar Nuevo</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Vendedor</th>
+            <th>Fecha de registro</th>
+            <th>Costo</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for c in productos %}
+        <tr>
+            <th>{{ c.id }}</th>
+            <th>{{ c.nombre }}</th>
+            <th>{{ c.vendedor }}</th>
+            <th>{{ c.fechaRegistro }}</th>
+            <th>{{ c.costo }}</th>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock contenido %}

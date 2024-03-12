@@ -1,0 +1,32 @@
+{% extends "aplicacion/index.html" %}
+
+{% block titulo %}
+<h1 class="display-5 fw-bolder text-white mb-2">Facturas</h1>
+<p class="lead fw-normal text-white-50 mb-4">Visión completa de todos los registros de facturas</p>
+{% endblock titulo %}
+
+{% block contenido %}
+<a class="btn btn-primary mb-5" href="{% url 'facturas_form' %}" role="button">Agregar Nuevo</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Vendedor</th>
+            <th>Cliente</th>
+            <th>Fecha de compra</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for c in facturas %}
+        <tr>
+            <th>{{ c.id }}</th>
+            <th>{{ c.nombreProducto }}</th>
+            <th>{{ c.nombreVendedor }}</th>
+            <th>{{ c.nombreCliente }}</th>
+            <th>{{ c.fechaCompra }}</th>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock contenido %}
