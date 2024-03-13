@@ -1,8 +1,14 @@
-1-Inicio
-2-Vendedores
-3-Clientes
-4-Productos
-5-Facturas
-
-(2-5) - Cada uno con su boton que lleva al formulario y muestra los registros de la base de datos
-(1) - Se encuentra el buscador de productos por nombre
+1. **Inicio**
+    - En la página principal se encuentra el buscador de productos por nombre.
+2. **Vendedores**
+   - [Ir al formulario]
+   - [Ver registros de la base de datos]
+3. **Clientes**
+   - [Ir al formulario]
+   - [Ver registros de la base de datos]
+4. **Productos**
+   - [Ir al formulario]
+   - [Ver registros de la base de datos]
+5. **Facturas**
+   - [Ir al formulario]
+   - [Ver registros de la base de datos]
